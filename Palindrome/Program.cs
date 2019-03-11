@@ -7,13 +7,14 @@ namespace Palindrome
         public static void Main()
         {
             Console.WriteLine("Enter a word");
-            string word = Console.ReadLine();
+            string word = Console.ReadLine();            
             bool palindrone = IsPalindrome(word);
             Console.WriteLine($"Is {word} a palindrome: {palindrone}");
             Console.ReadLine();
         }
         public static bool IsPalindrome(string word)
         {
+            word = word.ToLower();
             char[] wordArray = word.ToCharArray();
             Array.Reverse(wordArray);
             string reverseWord = String.Concat(wordArray);
